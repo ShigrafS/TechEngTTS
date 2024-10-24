@@ -9,10 +9,10 @@ This repository contains the code and resources for training a text-to-speech (T
 - [Dataset Description](#dataset-description)
 - [Model Architecture](#model-architecture)
 - [Training Setup](#training-setup)
+- [Approach](#approach)
 - [Performance Evaluation](#performance-evaluation)
 - [Audio Samples](#audio-samples)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -35,6 +35,10 @@ This project utilizes the Microsoft Text-To-Speech architecture, which is based 
 
 ### Key Features
 - [List any specific features or modifications made to the model]
+
+## Approach 
+The dataset stored on Kaggle contains the wav files and the labels. They are loaded onto a dataset dictionary along with it's array representation and sampling rate. All the characters are extracted and the new characters found in the data is added to the tokenizer. Speechbrain model is used to generate the speaker embeddings to help the model adjust it's output. The dataset is prepared and longer files are trimmed off so as per the model requirement. SpeechT5 takes 600 token length of input. The dataset is split into train and test. A data collator is implemented to handle the padding. Training arguments is set up along with a remote repository. The model is set to be trained for 7 epochs. The training is done in steps to handle limited colab GPU access. The model is pushed to HuggingFace repository.
+
 
 ## Training Setup
 - **Environment**: 

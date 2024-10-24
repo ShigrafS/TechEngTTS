@@ -1,5 +1,4 @@
 # TTS model for Technical English Vocabulary
-# HindiTTS
 # Text-to-Speech Model Training
 
 ## Overview

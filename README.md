@@ -1,6 +1,9 @@
 # TTS model for Technical English Vocabulary
 # Text-to-Speech Model Training
 
+## Note: Due to limited GPU runtime on Colab, the model cannot be trained in a singel instance. Therefore, gradient checkpoint has been enabled to ensure gradual retrining on a daily basis.
+
+
 ## Overview
 This repository contains the code and resources for training a text-to-speech (TTS) model. The goal is to fine-tune a pre-trained TTS model to improve speech quality and adapt to specific speaker characteristics.
 
